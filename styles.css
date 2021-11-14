@@ -10,3 +10,7 @@
   margin: 1rem;
   border-radius: 1px;
 }
+.input-form {
+  display: flex;
+  justify-content: center;
+}

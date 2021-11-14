@@ -13,12 +13,30 @@
       crossorigin="anonymous"
     />
   </head>
-  <body style="background-color: #222f3e; font-family: 'Roboto', sans-serif">
+  <body
+    style="background-color: #222f3e; font-family: 'Roboto', sans-serif"
+    class="text-white"
+  >
     <header>
       <h1 class="display-1 text-center text-white">To-do List</h1>
     </header>
+    <form action="" class="input-form">
+      <input
+        type="text"
+        name="task"
+        placeholder="Enter your task"
+        style="width: 40%"
+      />
+      <select class="form-select" style="width: auto">
+        <option selected>Choose...</option>
+        <option value="Daily">Daily</option>
+        <option value="Weekly">Weekly</option>
+        <option value="Monthyl">Monthly</option>
+      </select>
+      <button class="btn btn-light">Submit</button>
+    </form>
     <hr class="line-across" />
-    <main class="text-white">
+    <main>
       <h1>Daily</h1>
       <hr class="line-across-2" />
       <h1>Weekly</h1>
