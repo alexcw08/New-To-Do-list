@@ -12,6 +12,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="scripts.js" defer></script>
   </head>
   <body
     style="background-color: #222f3e; font-family: 'Roboto', sans-serif"
@@ -26,22 +27,28 @@
         name="task"
         placeholder="Enter your task"
         style="width: 40%"
+        class="task-bar"
+        id="taskText"
       />
-      <select class="form-select" style="width: auto">
+      <select
+        class="time-select form-select"
+        style="width: auto"
+        id="selectText"
+      >
         <option selected>Choose...</option>
         <option value="Daily">Daily</option>
         <option value="Weekly">Weekly</option>
-        <option value="Monthyl">Monthly</option>
+        <option value="Monthly">Monthly</option>
       </select>
-      <button class="btn btn-light">Submit</button>
+      <button class="submit-button btn btn-light" type="button">Submit</button>
     </form>
     <hr class="line-across" />
     <main>
-      <h1>Daily</h1>
+      <h1 id="dailySec">Daily</h1>
       <hr class="line-across-2" />
-      <h1>Weekly</h1>
+      <h1 id="weeklySec">Weekly</h1>
       <hr class="line-across-2" />
-      <h1>Monthly</h1>
+      <h1 id="monthlySec">Monthly</h1>
     </main>
   </body>
 </html>
