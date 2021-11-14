@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+.line-across {
+  border: 2px solid #c8d6e5;
+  margin: 0.5rem;
+  border-radius: 1px;
+}
+.line-across-2 {
+  border: 2px solid #c8d6e5;
+  margin: 1rem;
+  border-radius: 1px;
+}
