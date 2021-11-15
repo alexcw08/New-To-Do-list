@@ -5,6 +5,7 @@ const submitBtn = document.getElementsByClassName("submit-button");
 const taskText = document.getElementById("taskText");
 const selectText = document.getElementById("selectText");
 const timeFrame = document.getElementsByClassName("time-select");
+const popUpDiv = document.getElementById("popupdiv");
 // Test function
 function testFunc() {
   console.log("Success!");
@@ -27,6 +28,11 @@ function addToList() {
     weekly.append(newTask);
   } else if (select == "Monthly") {
     monthly.append(newTask);
+  } else {
+    popUpDiv.style.display = "block";
+    setTimeout(function () {
+      popUpDiv.style.display = "none";
+    }, 2000);
   }
 }
 // Event listener that fires above function when submit is clicked

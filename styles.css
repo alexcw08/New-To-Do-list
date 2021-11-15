@@ -15,3 +15,13 @@
   justify-content: center;
   padding-bottom: 1.5rem;
 }
+.parent-div {
+  position: relative;
+}
+#popupdiv {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  display: none;
+}
