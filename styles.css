@@ -18,10 +18,31 @@
 .parent-div {
   position: relative;
 }
+
 #popupdiv {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 10;
+  bottom: 4.5rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: none;
+  width: 50rem;
+  height: 1%;
+  font-size: 0.9rem;
+  color: #e84118;
+}
+.daily-task-list {
+  display: flex;
+  flex-direction: column;
+}
+.daily-task-item {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  background-color: white;
+  margin-bottom: 0.4rem;
+}
+.daily-task-name {
+  padding-left: 1rem;
+  padding-top: 1rem;
 }

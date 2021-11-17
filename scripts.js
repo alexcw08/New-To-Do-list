@@ -22,17 +22,17 @@ function addToList() {
   let select = selectText.value;
   selectText.value = "Choose...";
 
-  if (select == "Daily") {
+  if (select == "Daily" && task != "") {
     daily.append(newTask);
-  } else if (select == "Weekly") {
+  } else if (select == "Weekly" && task != "") {
     weekly.append(newTask);
-  } else if (select == "Monthly") {
+  } else if (select == "Monthly" && task != "") {
     monthly.append(newTask);
   } else {
     popUpDiv.style.display = "block";
     setTimeout(function () {
       popUpDiv.style.display = "none";
-    }, 2000);
+    }, 4000);
   }
 }
 // Event listener that fires above function when submit is clicked
