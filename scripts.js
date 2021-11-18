@@ -6,6 +6,7 @@ const popUpDiv = document.getElementById("popupdiv");
 
 // Function that will add the task to the appropriate section
 function addToList() {
+  // Create the elements necessary to add a task and give it a name
   let taskItem = document.createElement("div");
   taskItem.classList.add("task-item");
 
@@ -15,13 +16,16 @@ function addToList() {
   taskText.value = "";
   taskItem.append(taskName);
 
+  /* Adds a button group container to the task and an edit/delete button included in the container.
+   Buttons have event listeners for their corresponding actions. */
+
   let btnGroup = document.createElement("div");
   btnGroup.classList.add("btn-group-vertical");
   taskItem.append(btnGroup);
 
   let editBtn = document.createElement("button");
   editBtn.classList.add("btn", "btn-primary");
-  editBtn.innerHTML = "Edit";
+  editBtn.innerHTML = "Done";
   btnGroup.append(editBtn);
 
   let deleteBtn = document.createElement("button");
@@ -30,9 +34,11 @@ function addToList() {
   btnGroup.append(deleteBtn);
   deleteBtn.addEventListener("click", delFunc);
 
+  // Captures user input for time frame and resets it to default value
   let select = selectText.value;
   selectText.value = "Choose...";
 
+  // If statement that checks if task has a string and time frame chosen, if so, task is appended to appropriate task list
   if (select == "Daily" && taskName.innerHTML != "") {
     taskList[0].append(taskItem);
   } else if (select == "Weekly" && taskName.innerHTML != "") {
