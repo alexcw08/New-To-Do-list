@@ -31,18 +31,18 @@
   font-size: 0.9rem;
   color: #e84118;
 }
-.daily-task-list {
+.task-list {
   display: flex;
   flex-direction: column;
 }
-.daily-task-item {
+.task-item {
   display: flex;
   justify-content: space-between;
   color: black;
   background-color: white;
   margin-bottom: 0.4rem;
 }
-.daily-task-name {
+.task-name {
   padding-left: 1rem;
   padding-top: 1rem;
 }

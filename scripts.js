@@ -1,33 +1,44 @@
-const daily = document.getElementById("dailySec");
-const weekly = document.getElementById("weeklySec");
-const monthly = document.getElementById("monthlySec");
+const taskList = document.getElementsByClassName("task-list");
 const submitBtn = document.getElementsByClassName("submit-button");
 const taskText = document.getElementById("taskText");
 const selectText = document.getElementById("selectText");
-const timeFrame = document.getElementsByClassName("time-select");
 const popUpDiv = document.getElementById("popupdiv");
-// Test function
-function testFunc() {
-  console.log("Success!");
-}
+
 // Function that will add the task to the appropriate section
 function addToList() {
-  let task = taskText.value;
+  let taskItem = document.createElement("div");
+  taskItem.classList.add("task-item");
+
+  let taskName = document.createElement("h2");
+  taskName.classList.add("task-name");
+  taskName.innerHTML = taskText.value;
   taskText.value = "";
-  let newTask = document.createElement("div");
-  newTask.innerHTML = task;
-  newTask.classList.add("alert");
-  newTask.classList.add("alert-danger");
+  taskItem.append(taskName);
+
+  let btnGroup = document.createElement("div");
+  btnGroup.classList.add("btn-group-vertical");
+  taskItem.append(btnGroup);
+
+  let editBtn = document.createElement("button");
+  editBtn.classList.add("btn", "btn-primary");
+  editBtn.innerHTML = "Edit";
+  btnGroup.append(editBtn);
+
+  let deleteBtn = document.createElement("button");
+  deleteBtn.classList.add("btn", "btn-primary");
+  deleteBtn.innerHTML = "Delete";
+  btnGroup.append(deleteBtn);
+  deleteBtn.addEventListener("click", delFunc);
 
   let select = selectText.value;
   selectText.value = "Choose...";
 
-  if (select == "Daily" && task != "") {
-    daily.append(newTask);
-  } else if (select == "Weekly" && task != "") {
-    weekly.append(newTask);
-  } else if (select == "Monthly" && task != "") {
-    monthly.append(newTask);
+  if (select == "Daily" && taskName.innerHTML != "") {
+    taskList[0].append(taskItem);
+  } else if (select == "Weekly" && taskName.innerHTML != "") {
+    taskList[1].append(taskItem);
+  } else if (select == "Monthly" && taskName.innerHTML != "") {
+    taskList[2].append(taskItem);
   } else {
     popUpDiv.style.display = "block";
     setTimeout(function () {
@@ -37,3 +48,6 @@ function addToList() {
 }
 // Event listener that fires above function when submit is clicked
 submitBtn[0].addEventListener("click", addToList);
+function delFunc() {
+  this.parentElement.parentElement.remove();
+}
