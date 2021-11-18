@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-
+.section-name {
+  padding-left: 0.5rem;
+}
 .line-across {
   border: 2px solid #c8d6e5;
   margin: 0.5rem;
@@ -34,12 +36,21 @@
 .task-list {
   display: flex;
   flex-direction: column;
+  padding-left: 0.5rem;
+  padding-right: 0.3rem;
 }
 .task-item {
   display: flex;
   justify-content: space-between;
   color: black;
   background-color: white;
+  margin-bottom: 0.4rem;
+}
+.task-item-done {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  background-color: #16a085;
   margin-bottom: 0.4rem;
 }
 .task-name {

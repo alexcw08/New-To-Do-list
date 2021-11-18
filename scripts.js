@@ -23,10 +23,11 @@ function addToList() {
   btnGroup.classList.add("btn-group-vertical");
   taskItem.append(btnGroup);
 
-  let editBtn = document.createElement("button");
-  editBtn.classList.add("btn", "btn-primary");
-  editBtn.innerHTML = "Done";
-  btnGroup.append(editBtn);
+  let doneBtn = document.createElement("button");
+  doneBtn.classList.add("btn", "btn-primary");
+  doneBtn.innerHTML = "Done";
+  btnGroup.append(doneBtn);
+  doneBtn.addEventListener("click", doneFunc);
 
   let deleteBtn = document.createElement("button");
   deleteBtn.classList.add("btn", "btn-primary");
@@ -56,4 +57,8 @@ function addToList() {
 submitBtn[0].addEventListener("click", addToList);
 function delFunc() {
   this.parentElement.parentElement.remove();
+}
+function doneFunc() {
+  this.parentElement.parentElement.classList.remove("task-item");
+  this.parentElement.parentElement.classList.add("task-item-done");
 }
