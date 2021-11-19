@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  background-color: #222f3e !important;
+  font-family: "Roboto", sans-serif !important;
+}
 .section-name {
   padding-left: 0.5rem;
 }
@@ -56,4 +60,10 @@
 .task-name {
   padding-left: 1rem;
   padding-top: 1rem;
+}
+#selectText {
+  width: auto;
+}
+#taskText {
+  width: 40%;
 }

@@ -14,10 +14,7 @@
     />
     <script src="scripts.js" defer></script>
   </head>
-  <body
-    style="background-color: #222f3e; font-family: 'Roboto', sans-serif"
-    class="text-white"
-  >
+  <body class="text-white">
     <header>
       <h1 class="display-1 text-center text-white">To-do List</h1>
     </header>
@@ -26,15 +23,10 @@
         type="text"
         name="task"
         placeholder="Enter your task"
-        style="width: 40%"
         class="task-bar"
         id="taskText"
       />
-      <select
-        class="time-select form-select"
-        style="width: auto"
-        id="selectText"
-      >
+      <select class="time-select form-select my-select" id="selectText">
         <option selected>Choose...</option>
         <option value="Daily">Daily</option>
         <option value="Weekly">Weekly</option>
@@ -53,6 +45,7 @@
     <main>
       <h1 class="section-name">Daily</h1>
       <div class="task-list">
+        <!-- 
         <div class="task-item">
           <h2 class="task-name">Do the dishes.</h2>
           <div class="btn-group-vertical">
@@ -60,6 +53,7 @@
             <button class="btn btn-primary">Delete</button>
           </div>
         </div>
+        -->
       </div>
       <hr class="line-across-2" />
       <h1 class="section-name">Weekly</h1>
