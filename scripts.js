@@ -59,6 +59,18 @@ function delFunc() {
   this.parentElement.parentElement.remove();
 }
 function doneFunc() {
+  /*
   this.parentElement.parentElement.classList.remove("task-item");
   this.parentElement.parentElement.classList.add("task-item-done");
+  this.innerHTML = "Undo";
+  */
+  if (this.parentElement.parentElement.classList.contains("task-item")) {
+    this.parentElement.parentElement.classList.remove("task-item");
+    this.parentElement.parentElement.classList.add("task-item-done");
+    this.innerHTML = "Undo";
+  } else {
+    this.parentElement.parentElement.classList.remove("task-item-done");
+    this.parentElement.parentElement.classList.add("task-item");
+    this.innerHTML = "Done";
+  }
 }
