@@ -56,16 +56,18 @@ function addToList() {
 // Event listener that fires above function when submit is clicked
 submitBtn[0].addEventListener("click", addToList);
 function delFunc() {
-  this.parentElement.parentElement.remove();
+  let parent = this.parentElement.parentElement;
+  parent.remove();
 }
 function doneFunc() {
-  if (this.parentElement.parentElement.classList.contains("task-item")) {
-    this.parentElement.parentElement.classList.remove("task-item");
-    this.parentElement.parentElement.classList.add("task-item-done");
+  let parent = this.parentElement.parentElement;
+  if (parent.classList.contains("task-item")) {
+    parent.classList.remove("task-item");
+    parent.classList.add("task-item-done");
     this.innerHTML = "Undo";
   } else {
-    this.parentElement.parentElement.classList.remove("task-item-done");
-    this.parentElement.parentElement.classList.add("task-item");
+    parent.classList.remove("task-item-done");
+    parent.classList.add("task-item");
     this.innerHTML = "Done";
   }
 }
